@@ -44,13 +44,13 @@
 <body>
     <nav class="nav" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="/" class="nav-brand" aria-current="page">MERIDIAN LABS</a>
+            <a href="index.html" class="nav-brand" aria-current="page">MERIDIAN LABS</a>
             <ul class="nav-links">
                 <li><a href="#apps">Apps</a></li>
-                <li><a href="/methodology.html">Science</a></li>
+                <li><a href="methodology.html">Science</a></li>
                 <li><a href="#demo">Demo</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="/support.html">Support</a></li>
+                <li><a href="support.html">Support</a></li>
             </ul>
             <div class="nav-mobile-actions">
                 <a href="#apps" class="nav-mobile-cta">Browse Apps</a>
@@ -65,10 +65,10 @@
     <div class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
         <ul class="mobile-menu-links">
             <li><a href="#apps">Apps</a></li>
-            <li><a href="/methodology.html">Science</a></li>
+            <li><a href="methodology.html">Science</a></li>
             <li><a href="#demo">Demo</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="/support.html">Support</a></li>
+            <li><a href="support.html">Support</a></li>
         </ul>
         <a href="#apps" class="mobile-menu-cta">Browse Apps</a>
     </div>
@@ -99,7 +99,7 @@
             </div>
             <div class="hero-buttons">
                 <a href="#apps" class="hero-cta">Browse Apps</a>
-                <a href="/methodology.html" class="hero-cta-secondary">Our Methodology</a>
+                <a href="methodology.html" class="hero-cta-secondary">Our Methodology</a>
             </div>
         </div>
     </section>
@@ -408,7 +408,7 @@
                     </div>
                 </div>
             </div>
-            <a href="/methodology.html" class="engine-link">Deep dive into our methodology &rarr;</a>
+            <a href="methodology.html" class="engine-link">Deep dive into our methodology &rarr;</a>
         </div>
     </section>
 
@@ -554,16 +554,16 @@
                 <div class="footer-col">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="/methodology.html">Methodology</a></li>
-                        <li><a href="/support.html">Support</a></li>
-                        <li><a href="mailto:meridianlabsapps@gmail.com">Contact</a></li>
+                        <li><a href="methodology.html">Methodology</a></li>
+                        <li><a href="support.html">Support</a></li>
+                        <li><a href="support.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/terms.html">Terms of Use</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Use</a></li>
                     </ul>
                 </div>
             </div>
@@ -768,6 +768,43 @@
                     /* Update scroll fade indicators for newly visible grid */
                     var grid = activeSection.querySelector('.apps-grid');
                     if (grid) updateScrollFade(grid);
+                }
+            });
+        });
+    })();
+
+    /* Footer Brand Links — activate correct tab when clicked */
+    (function() {
+        var brandLinks = document.querySelectorAll('.footer-col a[href^="#brand-"]');
+        brandLinks.forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                var brandId = this.getAttribute('href').substring(1);
+                var tabs = document.querySelectorAll('.app-tab');
+                var sections = document.querySelectorAll('.brand-section');
+                var targetTab = document.querySelector('.app-tab[data-brand="' + brandId + '"]');
+                if (targetTab) {
+                    tabs.forEach(function(t) {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    targetTab.classList.add('active');
+                    targetTab.setAttribute('aria-selected', 'true');
+                    sections.forEach(function(s) {
+                        if (s.id === brandId) {
+                            s.classList.add('brand-section-active');
+                        } else {
+                            s.classList.remove('brand-section-active');
+                        }
+                    });
+                    var activeSection = document.getElementById(brandId);
+                    if (activeSection) {
+                        activeSection.querySelectorAll('.app-card').forEach(function(card) {
+                            card.classList.add('scroll-reveal', 'visible');
+                            card.style.transitionDelay = '0s';
+                        });
+                        var grid = activeSection.querySelector('.apps-grid');
+                        if (grid) updateScrollFade(grid);
+                    }
                 }
             });
         });
