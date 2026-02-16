@@ -141,9 +141,17 @@ body {
 .hero-bg {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(ellipse at 30% 20%, rgba(0, 212, 255, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 70% 80%, rgba(200, 168, 78, 0.04) 0%, transparent 50%);
+    background: url('images/MeridianLabs_header.jpg') center/cover no-repeat;
+    opacity: 0.35;
     z-index: 0;
+}
+
+.hero-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .hero::after {
