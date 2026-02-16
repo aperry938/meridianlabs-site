@@ -38,7 +38,7 @@
         "url": "https://meridianlabs.us"
     }
     </script>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=7">
     <noscript><style>body{opacity:1!important}.scroll-reveal{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
 </head>
 <body>
@@ -135,7 +135,7 @@
                 <span class="brand-label brand-techprep">TechPrep</span>
                 <h2>IT Certification Prep</h2>
                 <p class="section-subtitle">IT and cloud certification prep covering CompTIA, AWS, Snowflake, and PeopleCert certifications with terminal-inspired design.</p>
-                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                <div class="apps-grid-wrapper scroll-start"><button class="scroll-arrow scroll-arrow-left" aria-label="Scroll left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><button class="scroll-arrow scroll-arrow-right" aria-label="Scroll right"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button><div class="apps-grid">
                     <div class="app-card">
                         <img src="images/secai-icon.png" alt="TechPrep SecAI+ icon" class="app-icon" loading="lazy">
                         <h3>SecAI+</h3>
@@ -200,7 +200,7 @@
                 <span class="brand-label brand-vitalprep">VitalPrep</span>
                 <h2>Healthcare Exam Prep</h2>
                 <p class="section-subtitle">Healthcare certification prep covering pharmacy, nursing, medical assisting, and nursing school entrance with science-backed study tools.</p>
-                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                <div class="apps-grid-wrapper scroll-start"><button class="scroll-arrow scroll-arrow-left" aria-label="Scroll left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><button class="scroll-arrow scroll-arrow-right" aria-label="Scroll right"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button><div class="apps-grid">
                     <div class="app-card">
                         <img src="images/ptcb-icon.png" alt="VitalPrep PTCB icon" class="app-icon" loading="lazy">
                         <h3>PTCB</h3>
@@ -237,7 +237,7 @@
                 <span class="brand-label brand-aceprep">AcePrep</span>
                 <h2>Professional Exam Prep</h2>
                 <p class="section-subtitle">Professional exam prep covering military entrance, insurance licensing, project management, and emerging industry certifications.</p>
-                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                <div class="apps-grid-wrapper scroll-start"><button class="scroll-arrow scroll-arrow-left" aria-label="Scroll left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><button class="scroll-arrow scroll-arrow-right" aria-label="Scroll right"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button><div class="apps-grid">
                     <div class="app-card">
                         <img src="images/asvab-icon.png" alt="AcePrep ASVAB icon" class="app-icon" loading="lazy">
                         <h3>ASVAB</h3>
@@ -274,7 +274,7 @@
                 <span class="brand-label brand-glowstudy">GlowStudy</span>
                 <h2>Beauty Exam Prep</h2>
                 <p class="section-subtitle">Science-backed exam prep for NIC State Board Exams. Confidence calibration, spaced repetition, and a Pass Guarantee on every Pro plan.</p>
-                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                <div class="apps-grid-wrapper scroll-start"><button class="scroll-arrow scroll-arrow-left" aria-label="Scroll left"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><button class="scroll-arrow scroll-arrow-right" aria-label="Scroll right"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button><div class="apps-grid">
                     <div class="app-card">
                         <img src="images/esthetics-icon.png" alt="GlowStudy Esthetics icon" class="app-icon" loading="lazy">
                         <h3>Esthetics</h3>
@@ -702,7 +702,7 @@
         });
     })();
 
-    /* Horizontal Scroll Fade Indicators */
+    /* Horizontal Scroll Fade Indicators + Arrow Buttons */
     (function() {
         function updateScrollFade(grid) {
             var wrapper = grid.parentElement;
@@ -718,6 +718,18 @@
             updateScrollFade(grid);
             grid.addEventListener('scroll', function() { updateScrollFade(grid); }, { passive: true });
             window.addEventListener('resize', function() { updateScrollFade(grid); });
+        });
+
+        /* Arrow button click handlers */
+        document.querySelectorAll('.scroll-arrow').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var wrapper = this.parentElement;
+                var grid = wrapper.querySelector('.apps-grid');
+                if (!grid) return;
+                var scrollAmount = 480;
+                var direction = this.classList.contains('scroll-arrow-left') ? -1 : 1;
+                grid.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            });
         });
     })();
     </script>
