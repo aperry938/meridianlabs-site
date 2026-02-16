@@ -4,22 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meridian Labs — Science-Backed Exam Prep</title>
-    <meta name="description" content="10 exam prep apps across beauty, healthcare, military, and IT certifications. 25,000+ questions powered by 30+ peer-reviewed citations in cognitive science.">
+    <meta name="description" content="20 exam prep apps across beauty, healthcare, military, and IT certifications. 55,000+ questions powered by 30+ peer-reviewed citations in cognitive science.">
     <link rel="icon" type="image/png" href="favicon-32.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Meridian Labs">
     <meta property="og:title" content="Meridian Labs — Science-Backed Exam Prep">
-    <meta property="og:description" content="10 exam prep apps across beauty, healthcare, military, and IT certifications. 25,000+ questions powered by 30+ peer-reviewed citations in cognitive science.">
+    <meta property="og:description" content="20 exam prep apps across beauty, healthcare, military, and IT certifications. 55,000+ questions powered by 30+ peer-reviewed citations in cognitive science.">
     <meta property="og:image" content="https://meridianlabs.us/images/MeridianLabs_header.jpg">
     <meta property="og:url" content="https://meridianlabs.us/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#0a1628">
     <link rel="canonical" href="https://meridianlabs.us/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Meridian Labs",
+        "url": "https://meridianlabs.us",
+        "logo": "https://meridianlabs.us/images/MeridianLabs_header.jpg",
+        "description": "Science-backed exam prep apps across beauty, healthcare, military, and IT certifications. 55,000+ questions powered by 30+ peer-reviewed citations in cognitive science.",
+        "sameAs": [
+            "https://github.com/aperry938",
+            "https://linkedin.com/in/aperry938"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Meridian Labs",
+        "url": "https://meridianlabs.us"
+    }
+    </script>
     <link rel="stylesheet" href="style.css">
+    <noscript><style>body{opacity:1!important}.scroll-reveal{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
         <div class="nav-inner">
             <a href="/" class="nav-brand" aria-current="page">MERIDIAN LABS</a>
             <ul class="nav-links">
@@ -29,30 +52,48 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="/support.html">Support</a></li>
             </ul>
+            <div class="nav-mobile-actions">
+                <a href="#apps" class="nav-mobile-cta">Browse Apps</a>
+                <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+        <ul class="mobile-menu-links">
+            <li><a href="#apps">Apps</a></li>
+            <li><a href="/methodology.html">Science</a></li>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="/support.html">Support</a></li>
+        </ul>
+        <a href="#apps" class="mobile-menu-cta">Browse Apps</a>
+    </div>
 
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="container hero-content">
             <span class="hero-label">Science-Backed Exam Prep</span>
-            <h1>Pass Your Exam<span class="accent-dot">.</span></h1>
-            <p class="hero-tagline">10 apps across beauty, healthcare, military, and IT certifications. 25,000+ questions powered by 30+ peer-reviewed citations in cognitive science.</p>
+            <h1>Pass Your Exam.<br><span class="hero-gradient-text">Guaranteed.</span></h1>
+            <p class="hero-tagline">20 apps across beauty, healthcare, military, and IT certifications. 55,000+ questions powered by 30+ peer-reviewed citations in cognitive science.</p>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <span class="hero-stat-value">10</span>
+                    <span class="hero-stat-value" data-count="20">20</span>
                     <span class="hero-stat-label">Apps</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-value">4</span>
+                    <span class="hero-stat-value" data-count="4">4</span>
                     <span class="hero-stat-label">Brands</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-value">25K+</span>
+                    <span class="hero-stat-value" data-count="55" data-suffix="K+">55K+</span>
                     <span class="hero-stat-label">Questions</span>
                 </div>
                 <div class="hero-stat">
-                    <span class="hero-stat-value">30+</span>
+                    <span class="hero-stat-value" data-count="30" data-suffix="+">30+</span>
                     <span class="hero-stat-label">Citations</span>
                 </div>
             </div>
@@ -63,85 +104,40 @@
         </div>
     </section>
 
+    <!-- Trust Band -->
+    <section class="trust-band" aria-label="Trust indicators">
+        <div class="container trust-band-inner">
+            <span class="trust-pill">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                App Store
+            </span>
+            <span class="trust-pill">
+                <svg class="trust-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.61 1.81L13.79 12 3.61 22.19a1 1 0 0 1-.61-.92V2.73a1 1 0 0 1 .61-.92zm10.89 10.9l2.3 2.3-10.94 6.33 8.64-8.63zm3.2-3.2l2.3 1.33c.58.34.58 1.16 0 1.5l-2.3 1.33-2.54-2.58 2.54-2.58zM5.86 2.66l10.94 6.33-2.3 2.3-8.64-8.63z"/></svg>
+                Google Play
+            </span>
+            <span class="trust-divider" aria-hidden="true"></span>
+            <span class="trust-pill">55,000+ Questions</span>
+            <span class="trust-pill">30+ Research Citations</span>
+            <span class="trust-pill">Pass Guarantee</span>
+        </div>
+    </section>
+
     <!-- Apps -->
     <section class="apps-section" id="apps">
         <div class="container">
-
-            <!-- GlowStudy -->
-            <div class="brand-section">
-                <span class="brand-label brand-glowstudy">GlowStudy</span>
-                <h2>Beauty Exam Prep</h2>
-                <p class="section-subtitle">Science-backed exam prep for NIC State Board Exams. Confidence calibration, spaced repetition, and a Pass Guarantee on every Pro plan.</p>
-                <div class="apps-grid apps-grid-4">
-                    <div class="app-card">
-                        <img src="images/esthetics-icon.png" alt="GlowStudy Esthetics icon" class="app-icon" loading="lazy">
-                        <h3>Esthetics</h3>
-                        <p class="app-subtitle">NIC Esthetics State Board Exam</p>
-                        <p>2,450+ questions across 27 categories and 3 domains.</p>
-                        <a href="#" class="app-badge badge-esthetics badge-launching">Launching Soon</a>
-                    </div>
-                    <div class="app-card">
-                        <img src="images/cosmetology-icon.png" alt="GlowStudy Cosmetology icon" class="app-icon" loading="lazy">
-                        <h3>Cosmetology</h3>
-                        <p class="app-subtitle">NIC Cosmetology State Board Exam</p>
-                        <p>2,500+ questions across 40 categories and 4 domains.</p>
-                        <a href="#" class="app-badge badge-cosmetology badge-launching">Launching Soon</a>
-                    </div>
-                    <div class="app-card">
-                        <img src="images/barber-icon.png" alt="GlowStudy Barber icon" class="app-icon" loading="lazy">
-                        <h3>Barber</h3>
-                        <p class="app-subtitle">NIC Barber Styling Theory Exam</p>
-                        <p>2,500+ questions across 17 categories and 4 domains.</p>
-                        <a href="#" class="app-badge badge-barber badge-launching">Launching Soon</a>
-                    </div>
-                    <div class="app-card">
-                        <img src="images/nailtech-icon.png" alt="GlowStudy Nail Tech icon" class="app-icon" loading="lazy">
-                        <h3>Nail Tech</h3>
-                        <p class="app-subtitle">NIC Nail Technology Exam</p>
-                        <p>2,500+ questions across 13 categories and 2 domains.</p>
-                        <a href="#" class="app-badge badge-nailtech badge-launching">Launching Soon</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VitalPrep -->
-            <div class="brand-section">
-                <span class="brand-label brand-vitalprep">VitalPrep</span>
-                <h2>Healthcare Exam Prep</h2>
-                <p class="section-subtitle">Pharmacy technician certification prep with pharmacy-specific study tools, calculation drills, and drug reference materials.</p>
-                <div class="apps-grid apps-grid-1">
-                    <div class="app-card">
-                        <img src="images/ptcb-icon.png" alt="VitalPrep PTCB icon" class="app-icon" loading="lazy">
-                        <h3>PTCB</h3>
-                        <p class="app-subtitle">Pharmacy Technician Certification Exam</p>
-                        <p>3,300+ questions, 174 study materials, pharmacy calculations, and drug reference tables.</p>
-                        <a href="#" class="app-badge badge-ptcb badge-launching">Launching Soon</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- AcePrep -->
-            <div class="brand-section">
-                <span class="brand-label brand-aceprep">AcePrep</span>
-                <h2>Professional Exam Prep</h2>
-                <p class="section-subtitle">Military entrance exam prep with AFQT prediction, branch qualifiers, and all 9 ASVAB subtests covered.</p>
-                <div class="apps-grid apps-grid-1">
-                    <div class="app-card">
-                        <img src="images/asvab-icon.png" alt="AcePrep ASVAB icon" class="app-icon" loading="lazy">
-                        <h3>ASVAB</h3>
-                        <p class="app-subtitle">Armed Services Vocational Aptitude Battery</p>
-                        <p>4,200+ questions across 9 subtests, AFQT score prediction, and branch qualification tracking.</p>
-                        <a href="#" class="app-badge badge-asvab badge-launching">Launching Soon</a>
-                    </div>
-                </div>
+            <div class="app-tabs" role="tablist" aria-label="Filter by industry">
+                <button class="app-tab app-tab-it active" role="tab" aria-selected="true" data-brand="brand-it">IT &amp; Cybersecurity</button>
+                <button class="app-tab app-tab-healthcare" role="tab" aria-selected="false" data-brand="brand-healthcare">Healthcare</button>
+                <button class="app-tab app-tab-military" role="tab" aria-selected="false" data-brand="brand-military">Professional</button>
+                <button class="app-tab app-tab-beauty" role="tab" aria-selected="false" data-brand="brand-beauty">Beauty</button>
             </div>
 
             <!-- TechPrep -->
-            <div class="brand-section">
+            <div class="brand-section brand-section-active" id="brand-it">
                 <span class="brand-label brand-techprep">TechPrep</span>
                 <h2>IT Certification Prep</h2>
-                <p class="section-subtitle">Cybersecurity and IT certification prep with terminal-inspired design, covering CompTIA, Snowflake, and PeopleCert certifications.</p>
-                <div class="apps-grid apps-grid-4">
+                <p class="section-subtitle">IT and cloud certification prep covering CompTIA, AWS, Snowflake, and PeopleCert certifications with terminal-inspired design.</p>
+                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
                     <div class="app-card">
                         <img src="images/secai-icon.png" alt="TechPrep SecAI+ icon" class="app-icon" loading="lazy">
                         <h3>SecAI+</h3>
@@ -170,27 +166,146 @@
                         <p>1,900+ questions across 7 domains covering IT service management and value streams.</p>
                         <a href="#" class="app-badge badge-itil5 badge-launching">Launching Soon</a>
                     </div>
-                </div>
+                    <div class="app-card">
+                        <img src="images/aplus-icon.jpeg" alt="TechPrep A+ icon" class="app-icon" loading="lazy">
+                        <h3>A+</h3>
+                        <p class="app-subtitle">CompTIA A+ (220-1101/1102) Certification</p>
+                        <p>4,000+ questions across 5 domains covering hardware, networking, OS troubleshooting, and security.</p>
+                        <a href="#" class="app-badge badge-aplus badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/awsaip-icon.jpeg" alt="TechPrep AWS AI Practitioner icon" class="app-icon" loading="lazy">
+                        <h3>AWS AI Practitioner</h3>
+                        <p class="app-subtitle">AWS Certified AI Practitioner (AIF-C01)</p>
+                        <p>2,500+ questions across 4 domains covering AI/ML fundamentals, generative AI, and responsible AI.</p>
+                        <a href="#" class="app-badge badge-awsaip badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/awscp-icon.jpeg" alt="TechPrep AWS Cloud Practitioner icon" class="app-icon" loading="lazy">
+                        <h3>AWS Cloud Practitioner</h3>
+                        <p class="app-subtitle">AWS Certified Cloud Practitioner (CLF-C02)</p>
+                        <p>2,500+ questions across 4 domains covering cloud concepts, security, technology, and billing.</p>
+                        <a href="#" class="app-badge badge-awscp badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/networkplus-icon.jpeg" alt="TechPrep Network+ icon" class="app-icon" loading="lazy">
+                        <h3>Network+</h3>
+                        <p class="app-subtitle">CompTIA Network+ (N10-009) Certification</p>
+                        <p>2,500+ questions across 5 domains covering networking concepts, infrastructure, and security.</p>
+                        <a href="#" class="app-badge badge-networkplus badge-launching">Launching Soon</a>
+                    </div>
+                </div></div>
             </div>
 
-            <!-- Stats -->
-            <div class="stats-row">
-                <div class="stat-item">
-                    <div class="stat-value">10</div>
-                    <div class="stat-label">Apps</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">4</div>
-                    <div class="stat-label">Brands</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">25K+</div>
-                    <div class="stat-label">Questions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value">30+</div>
-                    <div class="stat-label">Research Citations</div>
-                </div>
+            <!-- VitalPrep -->
+            <div class="brand-section" id="brand-healthcare">
+                <span class="brand-label brand-vitalprep">VitalPrep</span>
+                <h2>Healthcare Exam Prep</h2>
+                <p class="section-subtitle">Healthcare certification prep covering pharmacy, nursing, medical assisting, and nursing school entrance with science-backed study tools.</p>
+                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                    <div class="app-card">
+                        <img src="images/ptcb-icon.png" alt="VitalPrep PTCB icon" class="app-icon" loading="lazy">
+                        <h3>PTCB</h3>
+                        <p class="app-subtitle">Pharmacy Technician Certification Exam</p>
+                        <p>3,300+ questions, 174 study materials, pharmacy calculations, and drug reference tables.</p>
+                        <a href="#" class="app-badge badge-ptcb badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/cna-icon.jpeg" alt="VitalPrep CNA icon" class="app-icon" loading="lazy">
+                        <h3>CNA</h3>
+                        <p class="app-subtitle">Certified Nursing Assistant Exam</p>
+                        <p>3,200+ questions across 4 domains covering nursing fundamentals, clinical skills, and patient safety.</p>
+                        <a href="#" class="app-badge badge-cna badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/cma-icon.jpeg" alt="VitalPrep CMA icon" class="app-icon" loading="lazy">
+                        <h3>Medical Assistant</h3>
+                        <p class="app-subtitle">AAMA Certified Medical Assistant (CMA)</p>
+                        <p>3,200+ questions across 3 domains covering general, administrative, and clinical medical assisting.</p>
+                        <a href="#" class="app-badge badge-cma badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/teas-icon.jpeg" alt="VitalPrep TEAS icon" class="app-icon" loading="lazy">
+                        <h3>TEAS</h3>
+                        <p class="app-subtitle">ATI Test of Essential Academic Skills</p>
+                        <p>3,200+ questions across 4 sections covering reading, math, science, and English language.</p>
+                        <a href="#" class="app-badge badge-teas badge-launching">Launching Soon</a>
+                    </div>
+                </div></div>
+            </div>
+
+            <!-- AcePrep -->
+            <div class="brand-section" id="brand-military">
+                <span class="brand-label brand-aceprep">AcePrep</span>
+                <h2>Professional Exam Prep</h2>
+                <p class="section-subtitle">Professional exam prep covering military entrance, insurance licensing, project management, and emerging industry certifications.</p>
+                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                    <div class="app-card">
+                        <img src="images/asvab-icon.png" alt="AcePrep ASVAB icon" class="app-icon" loading="lazy">
+                        <h3>ASVAB</h3>
+                        <p class="app-subtitle">Armed Services Vocational Aptitude Battery</p>
+                        <p>4,200+ questions across 9 subtests, AFQT score prediction, and branch qualification tracking.</p>
+                        <a href="#" class="app-badge badge-asvab badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/insurance-icon.jpeg" alt="AcePrep Insurance icon" class="app-icon" loading="lazy">
+                        <h3>Insurance License</h3>
+                        <p class="app-subtitle">Property &amp; Casualty / Life &amp; Health License</p>
+                        <p>3,000+ questions across 4 domains covering property &amp; casualty, life &amp; health, and ethics.</p>
+                        <a href="#" class="app-badge badge-insurance badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/cannabis-icon.jpeg" alt="AcePrep Cannabis icon" class="app-icon" loading="lazy">
+                        <h3>Cannabis Certs</h3>
+                        <p class="app-subtitle">NCCB Cannabis Certification</p>
+                        <p>2,300+ questions across 4 domains covering plant science, regulations, safety, and operations.</p>
+                        <a href="#" class="app-badge badge-cannabis badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/pmp-icon.jpeg" alt="AcePrep PMP icon" class="app-icon" loading="lazy">
+                        <h3>PMP</h3>
+                        <p class="app-subtitle">PMI Project Management Professional</p>
+                        <p>2,800+ questions across 3 domains covering people, process, and business environment.</p>
+                        <a href="#" class="app-badge badge-pmp badge-launching">Launching Soon</a>
+                    </div>
+                </div></div>
+            </div>
+
+            <!-- GlowStudy -->
+            <div class="brand-section" id="brand-beauty">
+                <span class="brand-label brand-glowstudy">GlowStudy</span>
+                <h2>Beauty Exam Prep</h2>
+                <p class="section-subtitle">Science-backed exam prep for NIC State Board Exams. Confidence calibration, spaced repetition, and a Pass Guarantee on every Pro plan.</p>
+                <div class="apps-grid-wrapper scroll-start"><div class="apps-grid">
+                    <div class="app-card">
+                        <img src="images/esthetics-icon.png" alt="GlowStudy Esthetics icon" class="app-icon" loading="lazy">
+                        <h3>Esthetics</h3>
+                        <p class="app-subtitle">NIC Esthetics State Board Exam</p>
+                        <p>2,450+ questions across 27 categories and 3 domains.</p>
+                        <a href="#" class="app-badge badge-esthetics badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/cosmetology-icon.png" alt="GlowStudy Cosmetology icon" class="app-icon" loading="lazy">
+                        <h3>Cosmetology</h3>
+                        <p class="app-subtitle">NIC Cosmetology State Board Exam</p>
+                        <p>2,500+ questions across 40 categories and 4 domains.</p>
+                        <a href="#" class="app-badge badge-cosmetology badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/barber-icon.png" alt="GlowStudy Barber icon" class="app-icon" loading="lazy">
+                        <h3>Barber</h3>
+                        <p class="app-subtitle">NIC Barber Styling Theory Exam</p>
+                        <p>2,500+ questions across 17 categories and 4 domains.</p>
+                        <a href="#" class="app-badge badge-barber badge-launching">Launching Soon</a>
+                    </div>
+                    <div class="app-card">
+                        <img src="images/nailtech-icon.png" alt="GlowStudy Nail Tech icon" class="app-icon" loading="lazy">
+                        <h3>Nail Tech</h3>
+                        <p class="app-subtitle">NIC Nail Technology Exam</p>
+                        <p>2,500+ questions across 13 categories and 2 domains.</p>
+                        <a href="#" class="app-badge badge-nailtech badge-launching">Launching Soon</a>
+                    </div>
+                </div></div>
             </div>
 
         </div>
@@ -320,7 +435,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="demo-widget">
+                <div class="demo-widget" aria-label="Interactive confidence calibration demo">
                     <div class="demo-widget-header">
                         <span class="demo-widget-id">LIVE DEMO</span>
                         <span class="demo-widget-status">SYSTEM ACTIVE</span>
@@ -359,22 +474,22 @@
             <p>We stake our revenue on our methodology — that's why every Pro plan includes a Pass Guarantee.</p>
             <div class="vision-grid">
                 <div class="vision-item">
-                    <span class="vision-icon" aria-hidden="true">&#x1F9EC;</span>
+                    <span class="vision-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0-6v6m18-6v6"/><circle cx="6" cy="12" r="1"/><circle cx="15" cy="8" r="1"/><circle cx="15" cy="16" r="1"/></svg></span>
                     <h3>Research-Driven</h3>
                     <p>30+ peer-reviewed citations behind every learning algorithm we ship.</p>
                 </div>
                 <div class="vision-item">
-                    <span class="vision-icon" aria-hidden="true">&#x1F30D;</span>
+                    <span class="vision-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
                     <h3>Multi-Industry</h3>
                     <p>4 brands spanning beauty, healthcare, military, and IT certifications.</p>
                 </div>
                 <div class="vision-item">
-                    <span class="vision-icon" aria-hidden="true">&#x1F3AF;</span>
+                    <span class="vision-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
                     <h3>Pass Guarantee</h3>
                     <p>We back every Pro plan with a money-back guarantee. We bet on the science.</p>
                 </div>
                 <div class="vision-item">
-                    <span class="vision-icon" aria-hidden="true">&#x1F504;</span>
+                    <span class="vision-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M12 7v5l3 3"/></svg></span>
                     <h3>Monthly Updates</h3>
                     <p>Content refreshed monthly — new questions, updated explanations, refined algorithms.</p>
                 </div>
@@ -385,7 +500,7 @@
     <section class="founder-section">
         <div class="container">
             <span class="section-label">Meet the Founder</span>
-            <h2 style="text-align:center;font-size:32px;font-weight:600;letter-spacing:-0.02em;margin-bottom:32px;color:var(--color-text);">Built by a Veteran, Researcher &amp; Engineer</h2>
+            <h2>Built by a Veteran, Researcher &amp; Engineer</h2>
             <div class="founder-card">
                 <div class="founder-identity">
                     <img src="images/founder-headshot.png" alt="Anthony C. Perry — Founder of Meridian Labs" class="founder-icon">
@@ -401,9 +516,14 @@
                     <h3>Anthony C. Perry, M.S.</h3>
                     <span class="founder-title">Founder &amp; Lead AI Engineer</span>
                     <p>AI engineer, researcher, and U.S. Air Force combat veteran &mdash; building exam prep grounded in the science of how professionals actually learn.</p>
-                    <p>Anthony logged over 2,000 flight hours and 455 combat sorties as a C-17 Aircraft Loadmaster across Operations Enduring Freedom, Iraqi Freedom, and New Dawn. He directed airlift for special forces insertions, aeromedical evacuations, dignified transfers of fallen service members, and two presidential support missions for Barack Obama &mdash; the kind of work that teaches you something no classroom covers about performing when the stakes are real. His service earned the Air Medal for sustained aerial achievement and the Humanitarian Service Medal for Hurricane Sandy relief operations that reached 8.2 million people.</p>
-                    <p>The same intensity that made Anthony a European track &amp; field qualifier and weightlifting club president eventually pulled him off the field and into the research lab. At San Diego State University &mdash; graduating Cum Laude with Distinction in Kinesiology and Dean&rsquo;s List honors &mdash; and California Baptist University (M.S., 3.87 GPA), he studied how the body and brain acquire skill under pressure. His graduate thesis, a randomized clinical trial drawing on 30+ peer-reviewed articles in biomechanics, neurophysiology, and motor learning, became the scientific foundation for every algorithm Meridian Labs ships.</p>
-                    <p>That research foundation now meets cutting-edge AI engineering. With nearly a decade in technology &mdash; from fintech infrastructure and AI-driven ventures to a Master&rsquo;s in Computer Science with an AI/ML emphasis &mdash; Anthony operates at the frontier of human-AI collaboration, orchestrating advanced generative AI not as a shortcut but as a precision instrument guided by the domain expertise and cognitive science behind every algorithm. It is this methodology &mdash; deep knowledge directing powerful tools &mdash; that allows a single engineer-researcher to architect, ship, and maintain ten production applications and 25,000+ exam questions at a standard that neither AI alone nor traditional study methods can match. Trilingual in English, German, and Spanish, and having lived across five countries on four continents, he builds for professionals everywhere who deserve better than guesswork when their careers are on the line.</p>
+                    <p>A decorated C-17 Aircraft Loadmaster with 455 combat sorties and the Air Medal, Anthony transitioned from military service into cognitive science research at San Diego State (Cum Laude) and California Baptist (M.S., 3.87 GPA). His graduate thesis on motor learning and cognitive science became the foundation for every Meridian Labs algorithm.</p>
+                    <p>That research now meets cutting-edge AI engineering &mdash; with a Master&rsquo;s in Computer Science (AI/ML) and nearly a decade in technology, he directs advanced generative AI to architect and maintain ten production applications.</p>
+                    <details class="founder-details">
+                        <summary>Read full bio</summary>
+                        <p>Anthony logged over 2,000 flight hours and 455 combat sorties as a C-17 Aircraft Loadmaster across Operations Enduring Freedom, Iraqi Freedom, and New Dawn. He directed airlift for special forces insertions, aeromedical evacuations, dignified transfers of fallen service members, and two presidential support missions for Barack Obama &mdash; the kind of work that teaches you something no classroom covers about performing when the stakes are real. His service earned the Air Medal for sustained aerial achievement and the Humanitarian Service Medal for Hurricane Sandy relief operations that reached 8.2 million people.</p>
+                        <p>The same intensity that made Anthony a European track &amp; field qualifier and weightlifting club president eventually pulled him off the field and into the research lab. At San Diego State University &mdash; graduating Cum Laude with Distinction in Kinesiology and Dean&rsquo;s List honors &mdash; and California Baptist University (M.S., 3.87 GPA), he studied how the body and brain acquire skill under pressure. His graduate thesis, a randomized clinical trial drawing on 30+ peer-reviewed articles in biomechanics, neurophysiology, and motor learning, became the scientific foundation for every algorithm Meridian Labs ships.</p>
+                        <p>That research foundation now meets cutting-edge AI engineering. With nearly a decade in technology &mdash; from fintech infrastructure and AI-driven ventures to a Master&rsquo;s in Computer Science with an AI/ML emphasis &mdash; Anthony operates at the frontier of human-AI collaboration, orchestrating advanced generative AI not as a shortcut but as a precision instrument guided by the domain expertise and cognitive science behind every algorithm. It is this methodology &mdash; deep knowledge directing powerful tools &mdash; that allows a single engineer-researcher to architect, ship, and maintain ten production applications and 25,000+ exam questions at a standard that neither AI alone nor traditional study methods can match. Trilingual in English, German, and Spanish, and having lived across five countries on four continents, he builds for professionals everywhere who deserve better than guesswork when their careers are on the line.</p>
+                    </details>
                     <div class="founder-links">
                         <a href="https://aperry938.github.io/" class="founder-cv-link">Research Portfolio</a>
                         <a href="https://aperry938.github.io/cv.html" class="founder-cv-link">Research CV</a>
@@ -416,23 +536,56 @@
     </section>
 
     <footer class="footer">
-        <div class="footer-inner">
-            <ul class="footer-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#apps">Apps</a></li>
-                <li><a href="/methodology.html">Methodology</a></li>
-                <li><a href="/support.html">Support</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/terms.html">Terms of Use</a></li>
-                <li><a href="mailto:meridianlabsapps@gmail.com">Contact</a></li>
-            </ul>
-            <span class="footer-copy">&copy; 2026 MERIDIAN LABS. All rights reserved.</span>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-brand">
+                    <span class="footer-brand">MERIDIAN LABS</span>
+                    <p class="footer-tagline">Science-backed exam prep powered by cognitive science research and proprietary learning algorithms.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Brands</h4>
+                    <ul>
+                        <li><a href="#brand-it">TechPrep</a></li>
+                        <li><a href="#brand-healthcare">VitalPrep</a></li>
+                        <li><a href="#brand-military">AcePrep</a></li>
+                        <li><a href="#brand-beauty">GlowStudy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/methodology.html">Methodology</a></li>
+                        <li><a href="/support.html">Support</a></li>
+                        <li><a href="mailto:meridianlabsapps@gmail.com">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 MERIDIAN LABS. All rights reserved.</span>
+            </div>
         </div>
     </footer>
+
     <script>
+    /* Page Load Reveal */
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+    });
+
+    /* Scroll Reveal — with blur-in (rack-focus) effect */
     (function() {
-        var targets = document.querySelectorAll('.app-card, .engine-card, .vision-item, .stat-item, .founder-card, .demo-widget, .demo-explain, .hero-stat');
-        if (!('IntersectionObserver' in window)) { return; }
+        var targets = document.querySelectorAll('.app-card, .engine-card, .vision-item, .founder-card, .demo-widget, .demo-explain, .hero-stat, .trust-pill');
+        if (!('IntersectionObserver' in window)) {
+            targets.forEach(function(el) { el.style.opacity = '1'; el.style.filter = 'none'; });
+            return;
+        }
         targets.forEach(function(el) { el.classList.add('scroll-reveal'); });
         var observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
@@ -448,6 +601,85 @@
         }, { threshold: 0.15 });
         targets.forEach(function(el) { observer.observe(el); });
     })();
+
+    /* Animated Stat Counters */
+    (function() {
+        var statEls = document.querySelectorAll('.hero-stat-value[data-count]');
+        if (!statEls.length || !('IntersectionObserver' in window)) return;
+
+        /* Check reduced motion preference */
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var animated = false;
+
+        function animateCounter(el) {
+            var target = parseInt(el.getAttribute('data-count'), 10);
+            var suffix = el.getAttribute('data-suffix') || '';
+            var duration = 1500;
+            var start = performance.now();
+
+            function update(now) {
+                var elapsed = now - start;
+                var progress = Math.min(elapsed / duration, 1);
+                /* Ease-out cubic */
+                var eased = 1 - Math.pow(1 - progress, 3);
+                var current = Math.round(eased * target);
+                el.textContent = current + suffix;
+                if (progress < 1) requestAnimationFrame(update);
+            }
+
+            el.textContent = '0' + suffix;
+            requestAnimationFrame(update);
+        }
+
+        var heroStats = document.querySelector('.hero-stats');
+        if (!heroStats) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !animated) {
+                    animated = true;
+                    statEls.forEach(animateCounter);
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.15 });
+
+        observer.observe(heroStats);
+    })();
+
+    /* Mobile Hamburger Menu */
+    (function() {
+        var hamburger = document.querySelector('.nav-hamburger');
+        var mobileMenu = document.querySelector('.mobile-menu');
+        if (!hamburger || !mobileMenu) return;
+
+        function toggleMenu() {
+            var isOpen = document.body.classList.toggle('menu-open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+            mobileMenu.setAttribute('aria-hidden', !isOpen);
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        /* Close on link click */
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.body.classList.remove('menu-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+            });
+        });
+
+        /* Close on Escape key */
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && document.body.classList.contains('menu-open')) {
+                toggleMenu();
+                hamburger.focus();
+            }
+        });
+    })();
+
     /* Confidence Calibration Demo */
     (function() {
         var widget = document.querySelector('.demo-widget');
@@ -498,6 +730,65 @@
             buttons.forEach(function(b) { b.classList.remove('selected'); });
             confidenceDiv.style.display = 'none';
             resultDiv.style.display = 'none';
+        });
+    })();
+
+    /* App Brand Tab Switcher */
+    (function() {
+        var tabs = document.querySelectorAll('.app-tab');
+        var sections = document.querySelectorAll('.brand-section');
+        if (!tabs.length) return;
+
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                var brandId = this.getAttribute('data-brand');
+
+                tabs.forEach(function(t) {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                this.classList.add('active');
+                this.setAttribute('aria-selected', 'true');
+
+                sections.forEach(function(s) {
+                    if (s.id === brandId) {
+                        s.classList.add('brand-section-active');
+                    } else {
+                        s.classList.remove('brand-section-active');
+                    }
+                });
+
+                /* Re-trigger scroll reveal for newly visible cards */
+                var activeSection = document.getElementById(brandId);
+                if (activeSection) {
+                    activeSection.querySelectorAll('.app-card').forEach(function(card) {
+                        card.classList.add('scroll-reveal', 'visible');
+                        card.style.transitionDelay = '0s';
+                    });
+                    /* Update scroll fade indicators for newly visible grid */
+                    var grid = activeSection.querySelector('.apps-grid');
+                    if (grid) updateScrollFade(grid);
+                }
+            });
+        });
+    })();
+
+    /* Horizontal Scroll Fade Indicators */
+    (function() {
+        function updateScrollFade(grid) {
+            var wrapper = grid.parentElement;
+            if (!wrapper || !wrapper.classList.contains('apps-grid-wrapper')) return;
+            var atStart = grid.scrollLeft <= 4;
+            var atEnd = grid.scrollLeft + grid.clientWidth >= grid.scrollWidth - 4;
+            wrapper.classList.toggle('scroll-start', atStart);
+            wrapper.classList.toggle('scroll-end', atEnd);
+        }
+        window.updateScrollFade = updateScrollFade;
+
+        document.querySelectorAll('.apps-grid').forEach(function(grid) {
+            updateScrollFade(grid);
+            grid.addEventListener('scroll', function() { updateScrollFade(grid); }, { passive: true });
+            window.addEventListener('resize', function() { updateScrollFade(grid); });
         });
     })();
     </script>
