@@ -4,6 +4,61 @@ All notable changes to [meridianlabs.us](https://meridianlabs.us) are documented
 
 ---
 
+## [2026-02-16] Tab Spacing Polish
+**Commit:** `8893ffa`
+
+### Changed
+- Increased `.app-tabs` bottom margin from 40px to 56px for breathing room between tab bar and brand content
+
+---
+
+## [2026-02-16] Collapsible Founder Section
+**Commit:** `9cbbf6d`
+
+### Changed
+- Founder section now collapsed by default behind a click-to-reveal button
+- Shows "Meet the Founder" heading + "Tap to learn more" hint with bouncing arrow
+- 120px blurred preview with gradient fade overlay
+- Smooth max-height transition on click to expand full content
+- Reduced founder section bottom padding (80px → 40px)
+- Cache busters bumped to v=10
+
+---
+
+## [2026-02-16] Center Brand Series Labels
+**Commit:** `693d649`
+
+### Changed
+- Brand labels (TechPrep, AcePrep, VitalPrep, GlowStudy) now centered above section headings
+- Enlarged from 11px to 14px with wider letter-spacing (0.14em)
+- Changed from `inline-block` to `block` with `margin: 0 auto` and `width: fit-content`
+- Cache busters bumped to v=9
+
+---
+
+## [2026-02-16] New Logo, Banner & Tab Reorder
+**Commit:** `ebfef87`
+
+### Added
+- **Nav logo:** Transparent Meridian Labs logo in navigation bar across all 5 pages
+- **`.nav-logo` CSS:** 28px desktop, 24px mobile (480px breakpoint) with border-radius
+- **Branding archive:** Source logo/banner files archived to `branding/logo/` and `branding/website-heroes/`
+
+### Changed
+- **Hero banner:** Replaced with new taller-crop image
+- **Favicon:** New logo at 32x32 (favicon-32.png) and 180x180 (apple-touch-icon.png, dark background)
+- **Tab order:** Swapped Professional before Healthcare for color separation (IT → Professional → Healthcare → Beauty)
+- **Section DOM order:** Matches new tab order (AcePrep before VitalPrep)
+- **JSON-LD logo:** Updated from `MeridianLabs_header.jpg` to `images/meridian-logo.png`
+- **Cache busters:** All 5 pages bumped to v=8
+
+### Removed
+- `images/MeridianLabs_icon_512.png` (old logo, unreferenced)
+- `favicon.ico` (old favicon, unreferenced)
+- `branding/MeridianLabs_header.jpg` and `branding/MeridianLabs_icon_512.png` (old source originals)
+
+---
+
 ## [2026-02-16] Hero Polish & Scroll Arrows
 **Commit:** `946686c`
 
