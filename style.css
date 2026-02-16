@@ -586,25 +586,25 @@ body.menu-open .mobile-menu-cta {
 }
 
 .app-tab-it {
-    color: var(--color-techprep);
-    background: rgba(92, 184, 178, 0.08);
-    border: 1px solid rgba(92, 184, 178, 0.2);
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.08);
+    border: 1px solid rgba(0, 212, 255, 0.2);
 }
 .app-tab-it:hover, .app-tab-it.active {
-    background: rgba(92, 184, 178, 0.18);
-    border-color: rgba(92, 184, 178, 0.5);
-    box-shadow: 0 4px 16px rgba(92, 184, 178, 0.15);
+    background: rgba(0, 212, 255, 0.18);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 212, 255, 0.15);
 }
 
 .app-tab-healthcare {
-    color: var(--color-vitalprep);
-    background: rgba(0, 188, 212, 0.08);
-    border: 1px solid rgba(0, 188, 212, 0.2);
+    color: #00BFA5;
+    background: rgba(0, 191, 165, 0.08);
+    border: 1px solid rgba(0, 191, 165, 0.2);
 }
 .app-tab-healthcare:hover, .app-tab-healthcare.active {
-    background: rgba(0, 188, 212, 0.18);
-    border-color: rgba(0, 188, 212, 0.5);
-    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.15);
+    background: rgba(0, 191, 165, 0.18);
+    border-color: rgba(0, 191, 165, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 191, 165, 0.15);
 }
 
 .app-tab-military {
