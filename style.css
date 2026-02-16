@@ -793,14 +793,16 @@ body.menu-open .mobile-menu-cta {
 
 /* Brand Section Labels */
 .brand-label {
-    display: inline-block;
-    font-size: 11px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 4px 12px;
+    padding: 6px 16px;
     border-radius: 6px;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
+    width: fit-content;
 }
 
 .brand-glowstudy { background: rgba(200, 160, 80, 0.15); color: var(--color-glowstudy); }
