@@ -17,6 +17,7 @@
     <meta name="theme-color" content="#0a1628">
     <link rel="canonical" href="https://meridianlabs.us/methodology.html">
     <link rel="stylesheet" href="style.css?v=3">
+    <noscript><style>body{opacity:1!important}.scroll-reveal{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
 </head>
 <body>
     <nav class="nav">
@@ -309,6 +310,7 @@
         </div>
     </footer>
     <script>
+    document.addEventListener('DOMContentLoaded', function() { document.body.classList.add('loaded'); });
     (function() {
         var targets = document.querySelectorAll('.algorithm-card, .research-card, .flow-step, .ms-item, .mh-stat');
         if (!('IntersectionObserver' in window)) { return; }
