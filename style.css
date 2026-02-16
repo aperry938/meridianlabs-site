@@ -137,6 +137,7 @@ body.loaded {
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
+.nav-logo { height: 28px; width: 28px; margin-right: 8px; vertical-align: middle; border-radius: 4px; }
 
 .nav-links {
     display: flex;
@@ -1682,6 +1683,7 @@ body.menu-open .mobile-menu-cta {
 @media (max-width: 480px) {
     .nav-inner { padding: 0 16px; }
     .nav-brand { font-size: 14px; }
+    .nav-logo { height: 24px; width: 24px; margin-right: 6px; }
     .container { padding: 0 16px; }
     .mh-stats { flex-direction: column; gap: 16px; }
 
