@@ -516,7 +516,7 @@ body.menu-open .mobile-menu-cta {
    ======================================== */
 
 .trust-band {
-    padding: 10px 0;
+    padding: 10px 0 32px;
     opacity: 0.8;
     transition: opacity 0.3s var(--ease-smooth);
 }
@@ -661,6 +661,16 @@ body.menu-open .mobile-menu-cta {
 
 .apps-section {
     padding: 80px 0 60px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.apps-heading {
+    text-align: center;
+    font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 32px;
+    color: var(--color-text);
 }
 
 .apps-section h2 {
