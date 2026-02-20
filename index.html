@@ -829,6 +829,16 @@
                 reveal.style.maxHeight = '120px';
             }
         });
+
+        // Recalculate max-height when inner <details> toggles
+        var details = reveal.querySelector('.founder-details');
+        if (details) {
+            details.addEventListener('toggle', function() {
+                if (reveal.classList.contains('founder-reveal-open')) {
+                    reveal.style.maxHeight = reveal.scrollHeight + 'px';
+                }
+            });
+        }
     })();
     </script>
 </body>
