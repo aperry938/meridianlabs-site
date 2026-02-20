@@ -530,27 +530,17 @@
                     <div class="founder-identity">
                         <img src="images/founder-headshot.png" alt="Anthony C. Perry — Founder of Meridian Labs" class="founder-icon">
                         <div class="founder-credentials">
-                            <span class="credential-pill">B.S. Kinesiology, SDSU &mdash; Cum Laude</span>
-                            <span class="credential-pill">M.S. Kinesiology, CBU</span>
                             <span class="credential-pill">M.S. Computer Science (AI/ML)</span>
-                            <span class="credential-pill">NSCA CSCS &middot; AWS ML Engineer</span>
+                            <span class="credential-pill">Clinical Research &middot; IRB Protocol</span>
                             <span class="credential-pill">USAF Veteran &middot; Air Medal</span>
                         </div>
                     </div>
                     <div class="founder-bio">
                         <h3>Anthony C. Perry, M.S.</h3>
                         <span class="founder-title">Founder &amp; Lead AI Engineer</span>
-                        <p>Researcher and AI engineer building exam prep grounded in cognitive science&mdash;how professionals actually learn, retain, and transfer knowledge to exam day.</p>
-                        <p>Anthony studied kinesiology and motor learning at San Diego State and California Baptist University, where his graduate thesis&mdash;a randomized clinical trial drawing on 30+ peer-reviewed articles in biomechanics, neurophysiology, and motor control&mdash;became the scientific foundation for every Meridian Labs algorithm. That research now meets AI engineering: with a Master&rsquo;s in Computer Science (AI/ML) and nearly a decade in technology, he directs generative AI to architect and maintain twenty production applications.</p>
-                        <details class="founder-details">
-                            <summary>Read full bio</summary>
-                            <p>Before research, Anthony served as a C-17 Aircraft Loadmaster in the U.S. Air Force&mdash;455 sorties and 1,977 flight hours across three theaters of operation. His service earned the Air Medal for sustained meritorious aerial achievement and the Humanitarian Service Medal for Hurricane Sandy relief. He separated with an Honorable Discharge in 2014.</p>
-                            <p>He earned his bachelor&rsquo;s in kinesiology at San Diego State University, graduating cum laude, and his master&rsquo;s at California Baptist University. His thesis examined yoga intervention for overuse injury prevention in distance runners&mdash;a randomized controlled trial integrating multimodal data collection and full IRB protocol. That research methodology now informs how every Meridian Labs algorithm is designed and validated.</p>
-                            <p>Currently completing a Master&rsquo;s in Computer Science (AI/ML emphasis), Anthony manages the full product lifecycle through AI-augmented engineering&mdash;a single-researcher methodology producing twenty production applications and 55,000+ exam questions across four certification verticals. Trilingual in English, German, and Spanish, and having lived across five countries on four continents, he builds for professionals everywhere.</p>
-                        </details>
+                        <p>Anthony&rsquo;s graduate research in motor learning and neurophysiology&mdash;a randomized clinical trial with full IRB protocol&mdash;became the scientific foundation for every Meridian Labs algorithm. With a Master&rsquo;s in Computer Science (AI/ML), he directs generative AI to build and maintain twenty production applications and 55,000+ exam questions across four certification verticals.</p>
                         <div class="founder-links">
                             <a href="https://aperry938.github.io/" class="founder-cv-link">Research Portfolio</a>
-                            <a href="https://aperry938.github.io/cv.html" class="founder-cv-link">Research CV</a>
                             <a href="https://github.com/aperry938" class="founder-cv-link">GitHub</a>
                             <a href="https://linkedin.com/in/aperry938" class="founder-cv-link">LinkedIn</a>
                         </div>
@@ -829,16 +819,6 @@
                 reveal.style.maxHeight = '120px';
             }
         });
-
-        // Recalculate max-height when inner <details> toggles
-        var details = reveal.querySelector('.founder-details');
-        if (details) {
-            details.addEventListener('toggle', function() {
-                if (reveal.classList.contains('founder-reveal-open')) {
-                    reveal.style.maxHeight = reveal.scrollHeight + 'px';
-                }
-            });
-        }
     })();
     </script>
 </body>

@@ -1422,31 +1422,6 @@ body.menu-open .mobile-menu-cta {
 .founder-bio p { font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.7; margin-bottom: 16px; }
 .founder-bio p:last-of-type { margin-bottom: 0; }
 
-/* Founder expand/collapse */
-.founder-details {
-    margin-top: 4px;
-}
-
-.founder-details summary {
-    font-size: var(--text-sm);
-    color: var(--color-accent);
-    cursor: pointer;
-    font-weight: 500;
-    padding: 8px 0;
-    list-style: none;
-    transition: color 0.2s var(--ease-smooth);
-}
-
-.founder-details summary::-webkit-details-marker { display: none; }
-.founder-details summary::marker { display: none; content: ''; }
-
-.founder-details summary::after { content: ' \2193'; }
-.founder-details[open] summary::after { content: ' \2191'; }
-
-.founder-details summary:hover { color: #33dfff; }
-
-.founder-details p:first-of-type { margin-top: 16px; }
-
 .founder-links { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
 
 .founder-cv-link {
