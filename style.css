@@ -1816,6 +1816,107 @@ body.menu-open .mobile-menu-cta {
 }
 
 /* ========================================
+   METHODOLOGY — REFERENCES SECTION
+   ======================================== */
+
+.methodology-references {
+    padding: 80px 0;
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.methodology-references h2 {
+    text-align: center;
+    font-size: clamp(1.625rem, 1.3rem + 1.3vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.methodology-references .section-subtitle {
+    text-align: center;
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    max-width: 560px;
+    margin: 0 auto 48px;
+    line-height: 1.5;
+}
+
+.ref-group {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.ref-group:last-child {
+    margin-bottom: 0;
+}
+
+.ref-group h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-accent);
+    padding: 20px 28px;
+    margin: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(0, 212, 255, 0.04);
+}
+
+.ref-item {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 12px 28px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(139, 146, 165, 0.08);
+    transition: background 0.2s var(--ease-smooth);
+}
+
+.ref-item:last-child {
+    border-bottom: none;
+}
+
+.ref-item:hover {
+    background: rgba(0, 212, 255, 0.03);
+}
+
+.ref-item em {
+    font-style: italic;
+}
+
+.ref-num {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 12px;
+    min-width: 22px;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.ref-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.ref-link {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.4;
+    transition: opacity 0.2s var(--ease-smooth);
+    flex-shrink: 0;
+}
+
+.ref-item:hover .ref-link {
+    opacity: 1;
+}
+
+/* ========================================
    RESPONSIVE
    ======================================== */
 
@@ -1912,6 +2013,9 @@ body.menu-open .mobile-menu-cta {
     .mh-stats { gap: 24px; flex-wrap: wrap; }
     .algorithm-card { padding: 24px; }
     .research-grid { grid-template-columns: 1fr; }
+    .methodology-references { padding: 60px 0; }
+    .ref-group h3 { padding: 16px 20px; font-size: 14px; }
+    .ref-item { padding: 10px 20px; font-size: 13px; gap: 10px; }
 
     .content { padding: 0 0 40px; }
 }
@@ -1937,6 +2041,9 @@ body.menu-open .mobile-menu-cta {
     }
 
     .methodology-stats { gap: 24px; }
+    .ref-group h3 { padding: 14px 16px; }
+    .ref-item { padding: 10px 16px; }
+    .ref-num { font-size: 11px; min-width: 20px; }
 }
 
 /* ========================================
