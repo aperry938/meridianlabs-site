@@ -4,6 +4,27 @@ All notable changes to [meridianlabs.us](https://meridianlabs.us) are documented
 
 ---
 
+## [2026-02-22] Research Bibliography & Algorithm Count Fix
+**Commit:** `72d60a6`
+
+### Added
+- Full **Research References** section on methodology page with 33 peer-reviewed sources
+- 4 domain groups: Cognitive Science & Learning (19), Metacognition (3), Habit Formation (7), Stress Inoculation (4)
+- Each reference links to DOI or Google Scholar; compact rows with hover-reveal arrow links
+- Scroll-reveal animations on reference group cards (matches existing algorithm card behavior)
+- CSS styles for `.methodology-references`, `.ref-group`, `.ref-item`, `.ref-num`, `.ref-text`, `.ref-link`
+- Responsive breakpoints at 768px and 480px for reference section
+
+### Changed
+- Algorithm count: **8 → 6** in hero stats, mid-page stats band, meta description, and OG description (matches the 6 algorithm cards actually displayed)
+- Research Foundation subtitle: removed "Full bibliography available upon request" → now just "Our algorithms draw from four major research domains."
+- CSS cache bust: `style.css?v=13` → `v=14`
+
+### Fixed
+- `.gitignore`: added `node_modules/` (from playwright install during visual verification)
+
+---
+
 ## [2026-02-16] Tab Spacing Polish
 **Commit:** `8893ffa`
 
