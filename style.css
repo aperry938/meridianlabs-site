@@ -789,6 +789,14 @@ body.menu-open .mobile-menu-cta {
 .badge-networkplus { background: #81D4FA; color: #1a1a18; }
 .badge-teas { background: #EF9A9A; color: #1a1a18; }
 .badge-pmp { background: #90CAF9; color: #1a1a18; }
+.badge-genaileader { background: #4285F4; color: #fff; }
+
+/* Free Badge */
+.badge-free {
+    background: #34A853;
+    color: #fff;
+    font-weight: 700;
+}
 
 /* Launching Soon Badge */
 .badge-launching {
