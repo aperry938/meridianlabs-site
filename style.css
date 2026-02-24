@@ -47,6 +47,9 @@
     --text-3xl:  clamp(2.369rem, 1.8rem + 2.5vw, 3.157rem);
     --text-4xl:  clamp(3.157rem, 2.2rem + 4vw, 4.209rem);
 
+    /* Radius Scale */
+    --radius-md: 12px;
+
     /* Easing curves */
     --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-spring: cubic-bezier(0.3, 0.7, 0.4, 1.5);
@@ -104,6 +107,11 @@ body.loaded {
     opacity: 1;
 }
 
+body.page-leaving {
+    opacity: 0 !important;
+    transition: opacity 0.25s ease-out !important;
+}
+
 /* ========================================
    NAVIGATION
    ======================================== */
@@ -130,6 +138,7 @@ body.loaded {
 }
 
 .nav-brand {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: 16px;
     font-weight: 700;
     color: var(--color-text);
@@ -638,6 +647,14 @@ body.menu-open .mobile-menu-cta {
 
 .brand-section.brand-section-active {
     display: block;
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.brand-section.brand-section-entering {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* ========================================
@@ -646,6 +663,7 @@ body.menu-open .mobile-menu-cta {
 
 .section-label {
     display: block;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: var(--text-xs);
     font-weight: 600;
     letter-spacing: 0.15em;
@@ -666,6 +684,7 @@ body.menu-open .mobile-menu-cta {
 
 .apps-heading {
     text-align: center;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     font-size: clamp(1.8rem, 1.4rem + 1.8vw, 2.5rem);
     font-weight: 700;
     letter-spacing: -0.03em;
@@ -711,7 +730,7 @@ body.menu-open .mobile-menu-cta {
 .app-card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     padding: 32px 24px;
     text-align: center;
     transition: transform 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
@@ -981,7 +1000,7 @@ body.menu-open .mobile-menu-cta {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-left: 3px solid var(--color-accent);
-    border-radius: 14px;
+    border-radius: var(--radius-md);
     padding: 24px 20px;
     overflow: hidden;
     transition: transform 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
@@ -1069,7 +1088,7 @@ body.menu-open .mobile-menu-cta {
     padding: 28px 20px;
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     transition: border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
 }
 
@@ -1137,7 +1156,7 @@ body.menu-open .mobile-menu-cta {
     padding: 32px 20px;
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     transition: border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), transform 0.3s var(--ease-smooth);
 }
 
@@ -1267,7 +1286,7 @@ body.menu-open .mobile-menu-cta {
     padding: 28px 20px;
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     transition: border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
 }
 
@@ -1529,6 +1548,25 @@ body.menu-open .mobile-menu-cta {
 .footer-copy {
     font-size: 13px;
     color: var(--color-text-secondary);
+}
+
+.footer-attribution {
+    display: block;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+    opacity: 0.7;
+}
+
+.footer-attribution a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s var(--ease-smooth);
+}
+
+.footer-attribution a:hover {
+    color: var(--color-accent);
 }
 
 /* ========================================
@@ -1997,6 +2035,7 @@ body.menu-open .mobile-menu-cta {
 
 @media (max-width: 768px) {
     .hero { padding: 56px 24px 28px; }
+    .hero-bg { opacity: 0.10; }
 
     .scroll-arrow { display: none; }
 
@@ -2068,6 +2107,20 @@ body.menu-open .mobile-menu-cta {
     .nav-logo { height: 28px; width: auto; margin-right: 6px; }
     .container { padding: 0 16px; }
     .mh-stats { flex-direction: column; gap: 16px; }
+
+    .trust-band-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .trust-pill {
+        font-size: 11px;
+        padding: 4px 10px;
+        justify-content: center;
+    }
+
+    .trust-divider { display: none; }
 
     .app-tabs { gap: 6px; }
     .app-tab { padding: 8px 14px; font-size: 12px; }

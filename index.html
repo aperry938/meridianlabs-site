@@ -38,7 +38,10 @@
         "url": "https://meridianlabs.us"
     }
     </script>
-    <link rel="stylesheet" href="style.css?v=13">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=14">
     <noscript><style>body{opacity:1!important}.scroll-reveal{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
 </head>
 <body>
@@ -592,6 +595,7 @@
             </div>
             <div class="footer-bottom">
                 <span class="footer-copy">&copy; 2026 MERIDIAN LABS. All rights reserved.</span>
+                <span class="footer-attribution">An <a href="https://aperry938.github.io/">Anthony C. Perry</a> project</span>
             </div>
         </div>
     </footer>
@@ -601,6 +605,17 @@
     document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
     });
+
+    /* Cross-site page transitions */
+    (function() {
+        document.addEventListener('click', function(e) {
+            var link = e.target.closest('a[href*="aperry938.github.io"]');
+            if (!link || e.metaKey || e.ctrlKey) return;
+            e.preventDefault();
+            document.body.classList.add('page-leaving');
+            setTimeout(function() { window.location.href = link.href; }, 250);
+        });
+    })();
 
     /* Scroll Reveal — with blur-in (rack-focus) effect */
     (function() {
@@ -709,6 +724,10 @@
         var sections = document.querySelectorAll('.brand-section');
         if (!tabs.length) return;
 
+        /* Ensure the initially active section is visible without animation */
+        var initialActive = document.querySelector('.brand-section.brand-section-active');
+        if (initialActive) initialActive.classList.add('brand-section-entering');
+
         tabs.forEach(function(tab) {
             tab.addEventListener('click', function() {
                 var brandId = this.getAttribute('data-brand');
@@ -721,16 +740,20 @@
                 this.setAttribute('aria-selected', 'true');
 
                 sections.forEach(function(s) {
-                    if (s.id === brandId) {
-                        s.classList.add('brand-section-active');
-                    } else {
-                        s.classList.remove('brand-section-active');
-                    }
+                    s.classList.remove('brand-section-active', 'brand-section-entering');
                 });
 
-                /* Re-trigger scroll reveal for newly visible cards */
                 var activeSection = document.getElementById(brandId);
                 if (activeSection) {
+                    activeSection.classList.add('brand-section-active');
+                    /* rAF to trigger the entering animation after display:block takes effect */
+                    requestAnimationFrame(function() {
+                        requestAnimationFrame(function() {
+                            activeSection.classList.add('brand-section-entering');
+                        });
+                    });
+
+                    /* Re-trigger scroll reveal for newly visible cards */
                     activeSection.querySelectorAll('.app-card').forEach(function(card) {
                         card.classList.add('scroll-reveal', 'visible');
                         card.style.transitionDelay = '0s';
@@ -760,14 +783,16 @@
                     targetTab.classList.add('active');
                     targetTab.setAttribute('aria-selected', 'true');
                     sections.forEach(function(s) {
-                        if (s.id === brandId) {
-                            s.classList.add('brand-section-active');
-                        } else {
-                            s.classList.remove('brand-section-active');
-                        }
+                        s.classList.remove('brand-section-active', 'brand-section-entering');
                     });
                     var activeSection = document.getElementById(brandId);
                     if (activeSection) {
+                        activeSection.classList.add('brand-section-active');
+                        requestAnimationFrame(function() {
+                            requestAnimationFrame(function() {
+                                activeSection.classList.add('brand-section-entering');
+                            });
+                        });
                         activeSection.querySelectorAll('.app-card').forEach(function(card) {
                             card.classList.add('scroll-reveal', 'visible');
                             card.style.transitionDelay = '0s';
