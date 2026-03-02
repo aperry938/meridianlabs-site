@@ -1835,7 +1835,7 @@ body.menu-open .mobile-menu-cta {
 .guarantee-link { font-size: var(--text-sm); color: var(--color-accent); text-decoration: none; font-weight: 500; transition: color 0.2s var(--ease-smooth); }
 .guarantee-link:hover { text-decoration: underline; }
 
-.methodology-cta { padding: 80px 0; text-align: center; }
+.methodology-cta { padding: 80px 0; text-align: center; border-top: 1px solid var(--color-border-subtle); }
 .methodology-cta h2 { font-size: clamp(1.625rem, 1.3rem + 1.3vw, 2rem); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 12px; color: var(--color-text); }
 .methodology-cta p { font-size: var(--text-base); color: var(--color-text-secondary); margin-bottom: 32px; }
 
