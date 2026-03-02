@@ -828,10 +828,10 @@ body.menu-open .mobile-menu-cta {
 .store-link {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 11px;
+    gap: 6px;
+    padding: 8px 20px;
+    border-radius: 980px;
+    font-size: var(--text-sm);
     font-weight: 500;
     text-decoration: none;
     transition: transform 0.2s var(--ease-smooth), opacity 0.2s;
