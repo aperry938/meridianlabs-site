@@ -826,7 +826,9 @@ body.menu-open .mobile-menu-cta {
     margin-top: auto;
 }
 
-.store-link {
+.app-card .store-link,
+.app-card .store-link:link,
+.app-card .store-link:visited {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -834,30 +836,21 @@ body.menu-open .mobile-menu-cta {
     border-radius: 980px;
     font-size: var(--text-sm);
     font-weight: 500;
+    color: #fff;
     text-decoration: none;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     transition: transform 0.2s var(--ease-smooth), opacity 0.2s;
     opacity: 0.85;
 }
 
-.store-link:hover {
+.app-card .store-link:hover {
     transform: translateY(-1px);
     opacity: 1;
 }
 
 .store-link svg {
     flex-shrink: 0;
-}
-
-.store-link-google {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #fff;
-}
-
-.store-link-apple {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #fff;
 }
 
 /* Launching Soon Badge */
