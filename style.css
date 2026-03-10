@@ -697,7 +697,7 @@ body.menu-open .mobile-menu-cta {
     font-size: clamp(1.625rem, 1.3rem + 1.3vw, 2rem);
     font-weight: 600;
     letter-spacing: -0.02em;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
     color: var(--color-text);
 }
 
